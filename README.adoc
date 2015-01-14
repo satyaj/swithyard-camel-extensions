@@ -10,9 +10,9 @@ image::doc/images/rhheader.png[width=900]
 
 This Reference Architecture discusses the Use case for using camel extension libraries in SwitchYard. The following 3 extension libraries are used:
 
-* link:switchyard-transformation-bindy/README.adoc[camel-bindy] 
-* link:switchyard-transformation-xmljson/README.adoc[camel-xmljson]
-* link:switchyard-transformation-xstream/README.adoc[camel-xstream]
+* link:switchyard-transformation-bindy[camel-bindy] 
+* link:switchyard-transformation-xmljson[camel-xmljson]
+* link:switchyard-transformation-xstream[camel-xstream]
 
 == OVERVIEW:
 

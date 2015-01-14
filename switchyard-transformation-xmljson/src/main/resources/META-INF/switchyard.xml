@@ -4,11 +4,11 @@
     <sca:service name="CamelService" promote="CamelServiceBuilder/CamelService">
       <sca:interface.java interface="com.example.switchyard.switchyard_transformation.CamelService"/>
       <file:binding.file name="file1">
-        <file:directory>/Users/sjayanti/Downloads/</file:directory>
+        <file:directory>/tmp/input/</file:directory>
         <file:charset>UTF-8</file:charset>
         <file:consume>
           <file:moveFailed>.failed</file:moveFailed>
-          <file:include>input.*.xml</file:include>
+          <file:include>input*.xml</file:include>
         </file:consume>
       </file:binding.file>
     </sca:service>

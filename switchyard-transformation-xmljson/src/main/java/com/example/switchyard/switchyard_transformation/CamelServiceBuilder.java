@@ -19,10 +19,8 @@ import org.switchyard.common.camel.SwitchYardCamelContext;
 
 
 public class CamelServiceBuilder extends RouteBuilder {
-
-		
- 
-	   
+	
+    
 	public void configure() {
 
 		XmlJsonDataFormat xmlJsonFormat = new XmlJsonDataFormat();
@@ -32,7 +30,6 @@ public class CamelServiceBuilder extends RouteBuilder {
 		from("switchyard://CamelService")
 		.log("Received message for 'CamelService' : ${body}")
 		.marshal(xmlJsonFormat)
-		.log("Received message for 'CamelService' : ${body}")
 		.log("After Unmarshalling with xmljson : ${body}")
 		
 		
