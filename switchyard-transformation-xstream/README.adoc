@@ -29,9 +29,19 @@ the camel-xstream extension is bundled in *xstream.zip*.
 To use the camel-xstream library, this library needs to be added as a module extension in EAP, and also to the switchyard sub-component in switchyard. This can be achieved via the following steps:
 
 . Unzip * xstream.zip* in the _$FSW_HOME/modules/system/layers/soa/org/apache/camel_ folder. A new folder ‘xstream’ will be created which consists of the _main/module.xml_ and the associated camel-xstream jar file. 
-. Open the configuration file used for the FSW install e.g _$FSW_HOME/standalone/configuration/standalone.xml_. Search for the ’switchyard’ sub-component and add the following line to the _<extensions>_ section:
-<extension identifier="org.apache.camel.xstream”/>
+. Open the configuration file used for the FSW install e.g _$FSW_HOME/standalone/configuration/standalone.xml_. Search for the ’switchyard’ sub-component and add the following line to the _<extensions>_ section:+
+`<extension identifier="org.apache.camel.xstream”/>`
 . Restart the Application Server instance to ensure the module extensions are updated.
+
+
+[NOTE]
+===============================
+*NOTE* Due to a link:https://bugzilla.redhat.com/show_bug.cgi?id=1168909[bug] in the xstream libraries shipped with FSW, the com.thoughtworks.xstream module needs to be changed, by adding the ‘_xmlpull-1.1.3.1.jar_’ to the resource library.
+
+Add the jar file (included here) in the ‘_$FSW_HOME/modules/system/layers/soa/com/thoughtworks/xstream_’, and add the following line to the module.xml:+
+`<resource-root path="xmlpull-1.1.3.1.jar"/>`
+
+===============================
 
 === Deploying the SwitchYard application
 
