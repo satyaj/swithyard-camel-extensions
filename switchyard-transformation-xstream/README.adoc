@@ -29,7 +29,7 @@ the camel-xstream extension is bundled in *xstream.zip*.
 To use the camel-xstream library, this library needs to be added as a module extension in EAP, and also to the switchyard sub-component in switchyard. This can be achieved via the following steps:
 
 . Unzip * xstream.zip* in the _$FSW_HOME/modules/system/layers/soa/org/apache/camel_ folder. A new folder ‘xstream’ will be created which consists of the _main/module.xml_ and the associated camel-xstream jar file. 
-. Open the configuration file used for the FSW install e.g _$FSW_HOME/standalone/configuration/standalone.xml_. Search for the ’switchyard’ sub-component and add the following line to the _<extensions>_ section:+
+. Open the configuration file used for the FSW install e.g _$FSW_HOME/standalone/configuration/standalone.xml_. Search for the ’switchyard’ sub-component and add the following line to the _<extensions>_ section: +
 `<extension identifier="org.apache.camel.xstream”/>`
 . Restart the Application Server instance to ensure the module extensions are updated.
 
