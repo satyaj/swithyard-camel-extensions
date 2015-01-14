@@ -15,7 +15,7 @@ This project provides a sample application and the steps required for adding cam
 
 == Project Structure
 
-This project consists of a single Switchyard composite application, with a Camel Service interface and a File binding. The file listener is set up to listen to the folder ‘_/etc/input_’. A sample input file ‘_input.txt_’ (consisting of comma separated values) is included. 
+This project consists of a single Switchyard composite application, with a Camel Service interface and a File binding. The file listener is set up to listen to the folder ‘_/tmp/input_’. A sample input file ‘_input.xml_’ (consisting of comma separated values) is included. 
 
 The camel-xmljson extension is bundled in * xmljson.zip*.
 
@@ -34,7 +34,7 @@ To use the camel-xmljson library, this library needs to be added as a module ext
 
 To test the application, first build the project using ‘_mvn clean install_’, and then deploy to the Application Server (either through the JBDS server configuration or using the administration console.
 
-Then, copy the test input file ‘input.txt’ to the ‘_/etc/input/_’ folder. 
+Then, copy the test input file ‘input.txt’ to the ‘_/tmp/input/_’ folder. 
 In the Server logs, the input and output text should be displayed correctly.
 
 

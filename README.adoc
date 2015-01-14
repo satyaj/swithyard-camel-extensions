@@ -10,9 +10,9 @@ image::doc/images/rhheader.png[width=900]
 
 This Reference Architecture discusses the Use case for using camel extension libraries in SwitchYard. The following 3 extension libraries are used:
 
-* link:switchyard-transformation-bindy/README.adoc [camel-bindy] 
-* link:switchyard-transformation-xmljson/README.adoc [camel-xmljson]
-* link:switchyard-transformation-xstream/README.adoc [camel-xstream]
+* link:switchyard-transformation-bindy/README.adoc[camel-bindy] 
+* link:switchyard-transformation-xmljson/README.adoc[camel-xmljson]
+* link:switchyard-transformation-xstream/README.adoc[camel-xstream]
 
 == OVERVIEW:
 
@@ -40,7 +40,7 @@ In addition, the following data format and language library extensions for Camel
 * Camel JAXB
 * Camel SOAP
 
-For using any other components or data formats in Camel, the module extension has to be added to the EAP configuration, as described link:https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse_Service_Works/6/html/Development_Guide_Volume_1_SwitchYard/chap-Extensions.html [here]
+For using any other components or data formats in Camel, the module extension has to be added to the EAP configuration, as described link:https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse_Service_Works/6/html/Development_Guide_Volume_1_SwitchYard/chap-Extensions.html[here]
 
 
 === DEVELOPMENT ENVIRONMENT

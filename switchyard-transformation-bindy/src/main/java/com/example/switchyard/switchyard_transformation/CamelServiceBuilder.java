@@ -24,19 +24,11 @@ public class CamelServiceBuilder extends RouteBuilder {
 
 		DataFormat bindy = new BindyCsvDataFormat(ContactDetails.class);
 
-
-		XStreamDataFormat xdf = new XStreamDataFormat();
-		Map<String, String> alias = new HashMap<String, String>();
-		alias.put("contacts", ContactDetails.class.getName());
-		xdf.setAliases(alias);
-
 		
 		from("switchyard://CamelService")
 		.log("Received message for 'CamelService' : ${body}")
 		.unmarshal(bindy)
 		.log("After Unmarshalling with bindy : ${body}")
-		.marshal(xdf)
-		.log("At the last endpoint: ${body}");
 
 	}
 
