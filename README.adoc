@@ -1,0 +1,57 @@
+:data-uri:
+:toc2:
+:ref_arch_doc: 
+
+image::doc/images/rhheader.png[width=900]
+
+:numbered!:
+
+== PURPOSE:
+
+This Reference Architecture discusses the Use case for using camel extension libraries in SwitchYard. The following 3 extension libraries are used:
+
+* link:switchyard-transformation-bindy/README.adoc [camel-bindy] 
+* link:switchyard-transformation-xmljson/README.adoc [camel-xmljson]
+* link:switchyard-transformation-xstream/README.adoc [camel-xstream]
+
+== OVERVIEW:
+
+The focus of the Reference Architecture if to address the requirements wherein a camel data format libraries can be used for marshalling/unmarshalling of data within a SwitchYard composite application. 
+
+== CAMEL LIBRARIES IN FUSE SERVICE WORKS
+
+In Fuse Service Works, the SwitchYard runtime consists of the following camel components:
+
+* Camel Core Component
+* Camel File Component
+* Camel FTP Component
+* Camel Atom Component
+* Camel JMS Component
+* Camel JPA Component
+* Camel Mail Component
+* Camel Netty Component
+* Camel Quartz Component
+* Camel SQL Component
+
+In addition, the following data format and language library extensions for Camel are included:
+
+* Camel MVEL
+* Camel OGNL
+* Camel JAXB
+* Camel SOAP
+
+For using any other components or data formats in Camel, the module extension has to be added to the EAP configuration, as described link:https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse_Service_Works/6/html/Development_Guide_Volume_1_SwitchYard/chap-Extensions.html [here]
+
+
+=== DEVELOPMENT ENVIRONMENT
+
+Your local environment will consist of the following :
+
+. *JBoss Developer Studio* : Eclipse based IDE containing the _Integration Stack_ suite of plugins.
+
+. A repository for source code of FSW projects.
+
+. *Fuse Service Works* : A local installation of the _Fuse Service Works_ full installation.
+
+
+

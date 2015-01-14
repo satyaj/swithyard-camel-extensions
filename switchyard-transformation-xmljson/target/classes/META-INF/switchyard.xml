@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><sy:switchyard xmlns:sy="urn:switchyard-config:switchyard:1.0" xmlns:bean="urn:switchyard-component-bean:config:1.0" xmlns:camel="urn:switchyard-component-camel:config:1.0" xmlns:file="urn:switchyard-component-camel-file:config:1.0" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" name="switchyard-transformation" targetNamespace="urn:com.example.switchyard:switchyard-transformation:1.0">
+    <sca:composite name="switchyard-transformation" targetNamespace="urn:com.example.switchyard:switchyard-transformation:1.0">
+        <sca:service name="CamelService" promote="CamelServiceBuilder/CamelService">
+            <sca:interface.java interface="com.example.switchyard.switchyard_transformation.CamelService"/>
+            <file:binding.file name="file1">
+                <file:directory>/Users/sjayanti/Downloads/</file:directory>
+                <file:charset>UTF-8</file:charset>
+                <file:consume>
+                    <file:moveFailed>.failed</file:moveFailed>
+                    <file:include>input.*.xml</file:include>
+                </file:consume>
+            </file:binding.file>
+        </sca:service>
+        <sca:component name="CamelServiceBuilder">
+            <camel:implementation.camel>
+                <camel:java class="com.example.switchyard.switchyard_transformation.CamelServiceBuilder"/>
+            </camel:implementation.camel>
+            <sca:service name="CamelService">
+                <sca:interface.java interface="com.example.switchyard.switchyard_transformation.CamelService"/>
+            </sca:service>
+        </sca:component>
+    </sca:composite>
+</sy:switchyard>

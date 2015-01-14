@@ -1,0 +1,1 @@
+{"age" : "25", "sex" : "male", "ticketPrice" : "3000"}

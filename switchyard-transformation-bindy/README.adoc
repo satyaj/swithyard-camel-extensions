@@ -1,0 +1,40 @@
+:data-uri:
+:toc2:
+
+image::../doc/images/rhheader.png[width=900]
+
+:numbered!:
+[abstract]
+== Using Camel Bindy Extension in SwitchYard
+
+:numbered:
+
+== Overview
+
+This project provides a sample application and the steps required for adding camel-bindy data format library to an existing SwitchYard runtime on EAP.
+
+== Project Structure
+
+This project consists of a single Switchyard composite application, with a Camel Service interface and a File binding. The file listener is set up to listen to the folder ‘_/etc/input_’. A sample input file ‘_input.txt_’ (consisting of comma separated values) is included. 
+
+The camel-bindy extension is bundled in *bindy.zip*.
+
+== Execution Environment
+
+=== Adding the Extension to SwitchYard sub-component
+
+To use the camel-bindy library, this library needs to be added as a module extension in EAP, and also to the switchyard sub-component in switchyard. This can be achieved via the following steps:
+
+. Unzip *bindy.zip* in the _$FSW_HOME/modules/system/layers/soa/org/apache/camel_ folder. A new folder ‘bindy’ will be created which consists of the _main/module.xml_ and the associated camel-bindy jar file. 
+. Open the configuration file used for the FSW install e.g _$FSW_HOME/standalone/configuration/standalone.xml_. Search for the ’switchyard’ sub-component and add the following line to the _<extensions>_ section:
+<extension identifier="org.apache.camel.bindy"/>
+. Restart the Application Server instance to ensure the module extensions are updated.
+
+=== Deploying the SwitchYard application
+
+To test the application, first build the project using ‘_mvn clean install_’, and then deploy to the Application Server (either through the JBDS server configuration or using the administration console.
+
+Then, copy the test input file ‘input.txt’ to the ‘_/etc/input/_’ folder. 
+In the Server logs, the input and output text should be displayed correctly.
+
+
